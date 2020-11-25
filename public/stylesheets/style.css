@@ -1,4 +1,13 @@
-.brand-logo {
+
+body {
+  text-align: center;
+  color: blue;
+  background-color: pink;
+
+}
+
+
+/* .brand-logo {
   margin-left: 15px;
 }
 
@@ -17,4 +26,4 @@
 
 .collection-item form {
   margin-top: -5px;
-}
+} */

@@ -26,13 +26,13 @@ app.get('/' , function(req, res){
 // var methodOverride = require('method-override');
 
 // // load the env vars
-// require('dotenv').config();
+ require('dotenv').config();
 
 // // create the Express app
 // var app = express();
 
 // // connect to the MongoDB with mongoose
-// require('./config/database');
+require('./config/database');
 // // configure Passport
 // require('./config/passport');
 
