@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// The factSchema is used to embedded docs in as tudent doc.
+// The factSchema is used to embedded docs in as user doc.
 // There is no model and no 'facts' collection
 const factSchema = new mongoose.Schema({
   text: String
@@ -8,7 +8,7 @@ const factSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const studentSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   cohort: String,
@@ -19,4 +19,4 @@ const studentSchema = new mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Student', studentSchema);
+module.exports = mongoose.model('User', userSchema);

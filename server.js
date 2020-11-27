@@ -15,6 +15,13 @@ app.get('/' , function(req, res){
     // });
     
 });
+
+app.use(function (req, res, next) {
+    res.locals.user = req.user;
+    next();
+  });
+
+
 //------------------------------------------------
 
 // var path = require('path');

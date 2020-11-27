@@ -1,13 +1,13 @@
-// const passport = require('passport');
-// const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-// const Student = require('../models/student');
+ const passport = require('passport');
+ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+ const Student = require('../models/user');
 
 // // configuring Passport!
-// passport.use(new GoogleStrategy({
-//     clientID: process.env.GOOGLE_CLIENT_ID,
-//     clientSecret: process.env.GOOGLE_SECRET,
-//     callbackURL: process.env.GOOGLE_CALLBACK
-//   },
+ passport.use(new GoogleStrategy({
+     clientID: process.env.GOOGLE_CLIENT_ID,
+     clientSecret: process.env.GOOGLE_SECRET,
+   callbackURL: process.env.GOOGLE_CALLBACK
+  },
 //   function(accessToken, refreshToken, profile, cb) {
 //     // a user has logged in via OAuth!
 //     Student.findOne({ 'googleId': profile.id }, function(err, student) {
