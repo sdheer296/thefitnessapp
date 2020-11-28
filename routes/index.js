@@ -13,18 +13,18 @@ router.get('/auth/google', passport.authenticate(
 ));
 
 // // Google OAuth callback route
-// router.get('/oauth2callback', passport.authenticate(
-//   'google',
-//   {
-//     successRedirect : '/students',
-//     failureRedirect : '/students'
-//   }
-// ));
+ router.get('/oauth2callback', passport.authenticate(
+  'google',
+   {
+     successRedirect : '/students',
+     failureRedirect : '/students'
+   }
+));
 
 // // OAuth logout route
-// router.get('/logout', function(req, res){
-//   req.logout();
-//   res.redirect('/');
-// });
+ router.get('/logout', function(req, res){
+   req.logout();
+   res.redirect('/');
+ });
 
-// module.exports = router;
+ module.exports = router;

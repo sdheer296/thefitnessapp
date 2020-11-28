@@ -8,7 +8,7 @@ const factSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const userSchema = new mongoose.Schema({
+const studentSchema = new mongoose.Schema({
   name: String,
   email: String,
   cohort: String,
@@ -19,4 +19,4 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Student', userSchema);
