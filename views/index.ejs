@@ -1,0 +1,27 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Welcome to the fitness club</title>
+   <link rel="stylesheet" href="stylesheets/style.css" />
+ </head>
+ <body>
+ 
+   <% if (user) { %>
+         <a href="/logout">Log Out</a>
+     <% } else { %>
+         <a href="/auth/google">Login with Google</a>
+   <% } %>
+ 
+   <h1>Welcome to My Fitness </h1>
+   <h2> Have a Great Workout. </h2>
+ 
+   <form action="/comment" method="POST">
+     <input type="text" placeholder="name" name="name">
+     <input type="text" placeholder="Leave a comment" name="comment">
+     <button type="submit">Submit</button>
+   </form>
+ </body>
+ </html> 
+ 
