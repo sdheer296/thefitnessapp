@@ -54,9 +54,14 @@ app.use(passport.session());
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 
-// invalid request, send 404 page
+
 app.use(function(req, res) {
-  res.status(404).send('Cant find that!');
+  res.send('Comment Submitted');
+
+
+  // invalid request, send 404 page
+  //app.use(function(req, res) {
+  //res.status(404).send('Cant find that!');
 });
 
 module.exports = app;
