@@ -21,7 +21,7 @@ function index(req, res, next) {
       students,
       user: req.user,
       name: req.query.name,
-      sortKey
+      sortKey,
     });
   });
 }

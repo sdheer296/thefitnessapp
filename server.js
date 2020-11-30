@@ -1,14 +1,9 @@
 var express = require('express');
 
 //create an express app
-var app = express();
 
-app.listen(3000);
-console.log("Listening to port 3000 from server.js");
-app.use(function (req, res, next) {
-    res.locals.user = req.user;
-    next();
-  });
+
+
 
 var path = require('path');
 var logger = require('morgan');
@@ -17,7 +12,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
-
+var app = express()
 // // load the env vars
  require('dotenv').config();
 
@@ -28,6 +23,7 @@ require('./config/passport');
 
 // require our routes
 var indexRoutes = require('./routes/index');
+var studentRoutes = require('./routes/students');
 
 // view engine setup
 
@@ -53,11 +49,15 @@ app.use(passport.session());
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
+app.use('/', studentRoutes);
 
-
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 app.use(function(req, res) {
   res.send('Comment Submitted');
-
+  
 
   // invalid request, send 404 page
   //app.use(function(req, res) {

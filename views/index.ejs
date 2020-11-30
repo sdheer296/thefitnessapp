@@ -25,7 +25,32 @@
     <option value = "4">Treadmill</option>
     <option value = "5">Equipment</option> 
   </select>
+
+   <div class="model-container">
+    <div class="modal">
   
+    <h3>Reserve a Time<h3>
+    <form class='model-container--form'>
+    <label for="start-select">Start Time</label>
+   
+    </select>
+
+    <select id='start-select'>
+      <option value="6 AM">6AM</option>
+      <option value="7 AM">7AM</option>
+      </select>
+
+    <label for="end-select">End Time</label>
+    
+    </select>
+    <select id='end-select'>
+      <option value="8 AM">8AM</option>
+      <option value="9 AM">9AM</option>
+    </select>
+    <button type="Submit">Submit</button>
+    </form>
+    </div>
+    </div>
  
    <form action="/comment" method="POST"><br>
      <input type="text" placeholder="Name" name="name">

@@ -4,7 +4,7 @@ const passport = require('passport');
 
 // // The root route renders our only view
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express', user: req.user });
   });
 
 // // Google OAuth login route
@@ -27,6 +27,8 @@ router.get('/auth/google', passport.authenticate(
    req.logout();
    res.redirect('/');
  });
+
+ router.post('/workouts', )
 
 module.exports = router;
  
