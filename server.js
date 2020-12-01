@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+
 // session middleware
 var session = require('express-session');
 var passport = require('passport');
@@ -22,6 +23,7 @@ require('./config/passport');
 var indexRoutes = require('./routes/index');
 var studentsRoutes = require('./routes/students');
 var workoutRoutes= require('./routes/workout');
+const router = require('./routes/index');
 
 
 // view engine setup
@@ -35,6 +37,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+//code for adding image
+//app.use('/static', express.static(path.join(__dirname, 'public')))
+router.use('/public' ,  express.static('./public'))
+
+
 // mount the session middleware
 app.use(session({
   secret: 'SEI Rocks!',
