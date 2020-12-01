@@ -1,0 +1,14 @@
+Title # thefitnessapp
+Description:
+This app allows users to login with their gmail accounts.
+User can successfully create a workout for specific time
+User can successfully delete a workout.
+User can leave a comment with their names
+
+Technology Used:
+Nodemon, Express, MongoDB, JS
+
+Challenges: 
+It was my first full stack application so it was very hard to structure it . Getting the proper routes was a challenge.
+Connecting one file with another was also very difficult.
+

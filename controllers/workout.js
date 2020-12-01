@@ -13,10 +13,12 @@ module.exports = {
   //};
 
   function index(req, res) {
-    Workout.find({}, function(err, workout) {
-      res.render('workout/index', { workout});
+    Workout.find({}, function(err, workouts) {
+      res.render('workout/index', { workouts});
     });
 };
+
+
 //respond with a form for entering a new workout
 function newWorkout(req, res) {
   var workout = new Workout(req.body);
@@ -26,6 +28,7 @@ function newWorkout(req, res) {
 function create(req, res) {
   var workout = new Workout(req.body);
   workout.save(function(err) {
+    
       // one way to handle errors
       if (err) return res.render('workout/new');
       // for now, redirect right back to new.ejs

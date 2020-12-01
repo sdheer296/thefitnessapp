@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= workout.title %></title>
+    <title>All Workouts</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
 
-    <h1><%= workout.title %></h1>
-    <p>Welcome to <%= workout.title %></p>
-    <a href="workout/new">New Workout</a>
+    <% workouts.forEach(w => { %>
+      <%= w.name %>
+      <% })  %>
   </body>
 </html>
