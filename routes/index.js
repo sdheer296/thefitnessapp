@@ -28,9 +28,19 @@ router.get('/auth/google', passport.authenticate(
    res.redirect('/');
  });
 
- router.post('/workout' , function(req, res){
+ router.post('/new/' , function(req, res){
   res.redirect('/workout');
 });
+
+// app.delete('/delete/ :id' ,(req, res => {
+//   Comment.remove(_id: req.params.id).then (() => {
+//     res.send('comment deleted')
+//   }).catch((err) => {
+//     console.log(error)
+//   })
+// }))
+
+
 
 module.exports = router;
  

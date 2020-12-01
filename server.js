@@ -48,8 +48,8 @@ app.use(passport.session());
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-app.use('/', studentsRoutes);
-app.use('/', workoutRoutes);
+app.use('/students', studentsRoutes);
+app.use('/workout', workoutRoutes);
 
 app.use(function (req, res, next) {
   res.locals.user = req.user;
@@ -67,5 +67,6 @@ app.use(function(req, res) {
 app.use(function(req, res) {
   res.send('Workout Reserved');
 });
+
 
 module.exports = app;

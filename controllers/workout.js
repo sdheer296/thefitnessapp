@@ -1,4 +1,4 @@
-const workout = require('../models/workout');
+const Workout = require('../models/workout');
 const router = require('../routes');
 
 module.exports = {
@@ -13,18 +13,18 @@ module.exports = {
   //};
 
   function index(req, res) {
-    workout.find({}, function(err, workout) {
-      res.render('workout/index', { workout });
+    Workout.find({}, function(err, workout) {
+      res.render('workout/index', { workout});
     });
 };
 //respond with a form for entering a new workout
 function newWorkout(req, res) {
-  var workout = new workout(req.body);
+  var workout = new Workout(req.body);
     res.render('workout/new');
 };
 
 function create(req, res) {
-  var workout = new workout(req.body);
+  var workout = new Workout(req.body);
   workout.save(function(err) {
       // one way to handle errors
       if (err) return res.render('workout/new');

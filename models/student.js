@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema; 
 
 // The factSchema is used to embedded docs in as user doc.
 // There is no model and no 'facts' collection
