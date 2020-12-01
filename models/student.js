@@ -11,8 +11,6 @@ const factSchema = new mongoose.Schema({
 const studentSchema = new mongoose.Schema({
   name: String,
   email: String,
-  cohort: String,
-  avatar: String,
   facts: [factSchema],
   googleId: String
 }, {

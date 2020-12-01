@@ -18,7 +18,7 @@ router.get('/auth/google', passport.authenticate(
   'google',
    {
      successRedirect : '/',
-     failureRedirect : '/'
+     failureRedirect : '/',
    }
 ));
 
@@ -28,7 +28,9 @@ router.get('/auth/google', passport.authenticate(
    res.redirect('/');
  });
 
- router.post('/workouts', )
+ router.post('/workout' , function(req, res){
+  res.redirect('/workout');
+});
 
 module.exports = router;
  
